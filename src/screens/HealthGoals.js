@@ -1,5 +1,6 @@
 import React, { useState} from 'react';
-import {Button, View, Text, TextInput, Picker,StyleSheet} from 'react-native';
+import {Button, View, Text, TextInput,StyleSheet} from 'react-native';
+import {Picker} from '@react-native-picker/picker';
 
 
 function HealthGoals() {
