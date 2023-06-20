@@ -15,12 +15,7 @@ const AppNavigator = () => {
     <MealPlanProvider>
     <NavigationContainer>
       <Stack.Navigator initialRouteName="MealPlanning"
-      screenOptions={{
-          headerStyle: styles.banderole,
-        }}
-        tabBarOptions={{
-          style: styles.banderole, 
-        }}>        
+        >        
         <Stack.Screen name="FoodDataBase" component={FoodDataBase} />
         <Stack.Screen name="HealthGoals" component={HealthGoals} />
         <Stack.Screen name="MealPlanning" component={MealPlanning} />
