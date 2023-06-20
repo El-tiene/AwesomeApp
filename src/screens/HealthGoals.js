@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
-     backgroundColor: '#fff',
+    backgroundColor: '#fff',
   },
   banderole:{
     background: '#16324F',

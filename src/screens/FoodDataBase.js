@@ -1,8 +1,7 @@
 //FoodDataBase.js
+import { Picker } from '@react-native-picker/picker';
 import React, { useState, useContext } from 'react';
 import { View, TextInput, Button, StyleSheet, Text, Modal } from 'react-native';
-import {Picker} from '@react-native-picker/picker';
-
 
 import { MealPlanContext, MealPlanProvider } from './MealPlanContext';
 function FoodDataBase() {
@@ -141,8 +140,8 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     flex: 1,
-    justifyContent: 'bottom',
-    alignItems: 'bottom',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
   centerSection: {
     backgroundColor: '#3E92CC',
