@@ -1,8 +1,7 @@
 //FoodDataBase.js
+import { Picker } from '@react-native-picker/picker';
 import React, { useState, useContext } from 'react';
 import { View, TextInput, Button, StyleSheet, Text, Modal } from 'react-native';
-import {Picker} from '@react-native-picker/picker';
-
 
 import { MealPlanContext, MealPlanProvider } from './MealPlanContext';
 function FoodDataBase() {
@@ -101,15 +100,6 @@ function FoodDataBase() {
             <Button title="Confirm" onPress={handleFoodAdded} color="#2A628F" />
           </View>
         </Modal>
-
-        <View style={styles.bottomContainer}>
-          <Text style={styles.text}>Vos aliments</Text>
-          {mealPlan.Monday['Breakfast'].map((food, index) => (
-            <Text key={index} style={styles.text}>
-              {food.label} - Quantity: {food.quantity}
-            </Text>
-          ))}
-        </View>
       </View>
     </MealPlanProvider>
   );
@@ -141,8 +131,8 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {
     flex: 1,
-    justifyContent: 'bottom',
-    alignItems: 'bottom',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
   centerSection: {
     backgroundColor: '#3E92CC',

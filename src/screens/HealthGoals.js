@@ -91,7 +91,7 @@ function HealthGoals() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.formulaire}>
+      <View>
         <Text style={styles.text}>Renseignez vos informations</Text>
         <TextInput
           style={styles.input}
@@ -144,15 +144,17 @@ function HealthGoals() {
         </Picker>
         <Button title="Valider" onPress={validForm} color="#2A628F" />
       </View>
-      {displayCaloricNeed && (
-      <View style={styles.result}>
-        <Text style={styles.text}>Votre besoin calorique journalier : </Text>
-        <Text style={styles.text}>{caloricNeed} kcal/jour </Text>
+      <View style={styles.containerResult}>
+        {displayCaloricNeed && (
+          <>
+            <Text style={styles.text}>Votre besoin calorique journalier :</Text>
+            <Text style={styles.text}>{caloricNeed} kcal/jour</Text>
+          </>
+        )}
       </View>
-    )}
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -160,14 +162,12 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: '#000',
   },
-  formulaire: {
-    flex: 0.5,
+  containerResult: {
+
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  result: {
-    flex: 0.5,
-    marginTop:100,
-  },
-  text:{
+  text: {
     color: '#fff',
     fontSize: 20,
     marginBottom: 10,
@@ -178,12 +178,8 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
-     backgroundColor: '#fff',
+    backgroundColor: '#fff',
   },
-  banderole:{
-    background: '#16324F',
-    text: '#ffffff',
-  }
 });
 
 

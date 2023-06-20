@@ -72,6 +72,7 @@ const getFrenchMealLabel = (mealType) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    height: '100%',
     backgroundColor: 'black',
     paddingVertical: 10,
     paddingHorizontal: 10,
